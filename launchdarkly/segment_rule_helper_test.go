@@ -15,7 +15,7 @@ func TestSegmentRuleFromResourceData(t *testing.T) {
 		expected ldapi.UserSegmentRule
 	}{
 		{
-			// https://github.com/launchdarkly/terraform-provider-launchdarkly/issues/79
+			// https://github.com/Stelminator/terraform-provider-launchdarkly/issues/79
 			name: "Zero case should not create a UserSegmentRule with 0 weight",
 			input: map[string]interface{}{
 				WEIGHT:    0,

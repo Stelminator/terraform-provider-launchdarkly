@@ -8,7 +8,7 @@ BUG FIXES:
 
 BUG FIXES:
 
-- The `launchdarkly_feature_flag_environment` data source now checks whether the environment exists and prints out a more descriptive error. [#101](https://github.com/launchdarkly/terraform-provider-launchdarkly/issues/101)
+- The `launchdarkly_feature_flag_environment` data source now checks whether the environment exists and prints out a more descriptive error. [#101](https://github.com/Stelminator/terraform-provider-launchdarkly/issues/101)
 
 NOTES:
 
@@ -41,7 +41,7 @@ NOTES:
 
 FEATURES:
 
-- Added Slack webhooks to the `launchdarkly_audit_log_subscription` resource and data source. [#16](https://github.com/launchdarkly/terraform-provider-launchdarkly/issues/16)
+- Added Slack webhooks to the `launchdarkly_audit_log_subscription` resource and data source. [#16](https://github.com/Stelminator/terraform-provider-launchdarkly/issues/16)
 - Added more Datadog host URLs to the Datadog `launchdarkly_audit_log_subscription` resource.
 
 BUG FIXES:
@@ -54,7 +54,7 @@ BUG FIXES:
 
 - Fixed a [bug](https://app.shortcut.com/launchdarkly/story/138913/terraform-provider-panics-when-trying-to-create-triggers-that-are-enabled) preventing `launchdarkly_flag_trigger`s from being created in the `enabled` state.
 
-- Fixed a [bug](https://github.com/launchdarkly/terraform-provider-launchdarkly/issues/79) introduced in v2.2.0 where `launchdarkly_segments` with `rule` blocks not containing a `weight` were defaulting to a `weight` of 0.
+- Fixed a [bug](https://github.com/Stelminator/terraform-provider-launchdarkly/issues/79) introduced in v2.2.0 where `launchdarkly_segments` with `rule` blocks not containing a `weight` were defaulting to a `weight` of 0.
 
 ## [2.4.0] (January 19, 2022)
 
@@ -133,7 +133,7 @@ FEATURES:
 
 BUG FIXES:
 
-- Fixed [a bug](https://github.com/launchdarkly/terraform-provider-launchdarkly/issues/67) resulting in nested environments not being imported on the `launchdarkly_project` resource. As a result, _all_ of a project's environments will be saved to the Terraform state during an import of the `launchdarkly_project` resource. Please keep in mind if you have not added all of the existing environments to your Terraform config before importing a `launchdarkly_project` resource, Terraform will delete these environments from LaunchDarkly during the next `terraform apply`. If you wish to manage project properties with Terraform but not nested environments consider using Terraform's [ignore changes](https://www.terraform.io/docs/language/meta-arguments/lifecycle.html#ignore_changes) lifecycle meta-argument.
+- Fixed [a bug](https://github.com/Stelminator/terraform-provider-launchdarkly/issues/67) resulting in nested environments not being imported on the `launchdarkly_project` resource. As a result, _all_ of a project's environments will be saved to the Terraform state during an import of the `launchdarkly_project` resource. Please keep in mind if you have not added all of the existing environments to your Terraform config before importing a `launchdarkly_project` resource, Terraform will delete these environments from LaunchDarkly during the next `terraform apply`. If you wish to manage project properties with Terraform but not nested environments consider using Terraform's [ignore changes](https://www.terraform.io/docs/language/meta-arguments/lifecycle.html#ignore_changes) lifecycle meta-argument.
 
 ## [2.0.0] (August 31, 2021)
 
@@ -275,7 +275,7 @@ BUG FIXES:
 
 BUG FIXES:
 
-- Fixes [a bug](https://github.com/launchdarkly/terraform-provider-launchdarkly/issues/60) where attempts to create `launchdarkly_feature_flag` variations with an empty string value were throwing a panic.
+- Fixes [a bug](https://github.com/Stelminator/terraform-provider-launchdarkly/issues/60) where attempts to create `launchdarkly_feature_flag` variations with an empty string value were throwing a panic.
 
 NOTES:
 
@@ -345,7 +345,7 @@ NOTES:
 
 BUG FIXES:
 
-- Fixed a bug preventing number and boolean values in targeting rules clauses from working. The new `value_type` attribute must be set in order to utilize number and boolean values. All values for a given targeting rule clause must be of the same type. [#51](https://github.com/launchdarkly/terraform-provider-launchdarkly/issues/51)
+- Fixed a bug preventing number and boolean values in targeting rules clauses from working. The new `value_type` attribute must be set in order to utilize number and boolean values. All values for a given targeting rule clause must be of the same type. [#51](https://github.com/Stelminator/terraform-provider-launchdarkly/issues/51)
 
 ## [1.5.0] (September 29, 2020)
 
@@ -382,7 +382,7 @@ NOTES:
 FEATURES:
 
 - Fixed a bug where omitted optional `launchdarkly_feature_flag_environment` parameters where making unwanted changes
-  to the resource upon creation. [#38](https://github.com/launchdarkly/terraform-provider-launchdarkly/issues/38)
+  to the resource upon creation. [#38](https://github.com/Stelminator/terraform-provider-launchdarkly/issues/38)
 
 ## [1.4.0] (August 21, 2020)
 
@@ -398,7 +398,7 @@ FEATURES:
 
 NOTES:
 
-- Point `go.mod` to github.com/launchdarkly/terraform-provider-launchdarkly
+- Point `go.mod` to github.com/Stelminator/terraform-provider-launchdarkly
 - Automatically set version header at build time
 
 ## [1.3.3] (July 31, 2020)
@@ -423,13 +423,13 @@ BUG_FIXES:
 
 BUG_FIXES:
 
-- Improve handling of API rate limits. [#26](https://github.com/launchdarkly/terraform-provider-launchdarkly/issues/26)
+- Improve handling of API rate limits. [#26](https://github.com/Stelminator/terraform-provider-launchdarkly/issues/26)
 
 ## [1.3.0] (May 05, 2020)
 
 FEATURES:
 
-- Added `default_on_variation` and `default_off_variation` to `launchdarkly_feature_flag`. These optional attributes can be used to set the default targeting behavior for flags in newly created environments. [#10](https://github.com/launchdarkly/terraform-provider-launchdarkly/issues/10) [#18](https://github.com/launchdarkly/terraform-provider-launchdarkly/issues/18)
+- Added `default_on_variation` and `default_off_variation` to `launchdarkly_feature_flag`. These optional attributes can be used to set the default targeting behavior for flags in newly created environments. [#10](https://github.com/Stelminator/terraform-provider-launchdarkly/issues/10) [#18](https://github.com/Stelminator/terraform-provider-launchdarkly/issues/18)
 
 BUG_FIXES:
 
@@ -444,13 +444,13 @@ FEATURES:
 BUG_FIXES:
 
 - Fix non-empty plan after creating a `launchdarkly_team_member` with a custom role.
-- Handle missing user target variations in `launchdarkly_feature_flag_environment` [#23](https://github.com/launchdarkly/terraform-provider-launchdarkly/issues/23)
+- Handle missing user target variations in `launchdarkly_feature_flag_environment` [#23](https://github.com/Stelminator/terraform-provider-launchdarkly/issues/23)
 
 ## [1.2.1] (April 14, 2020)
 
 BUG_FIXES:
 
-- Fix import bug in `launchdarkly_project` introduced in 1.2.0 [#21](https://github.com/launchdarkly/terraform-provider-launchdarkly/issues/21)
+- Fix import bug in `launchdarkly_project` introduced in 1.2.0 [#21](https://github.com/Stelminator/terraform-provider-launchdarkly/issues/21)
 
 NOTES:
 
@@ -461,12 +461,12 @@ NOTES:
 FEATURES:
 
 - Add new resource `launchdarkly_destination`. This resource is used to manage LaunchDarkly data export destinations.
-- Add `policy_statements` to `launchdarkly_webhook` and `launchdarkly_custom_role` [#16](https://github.com/launchdarkly/terraform-provider-launchdarkly/issues/16).
+- Add `policy_statements` to `launchdarkly_webhook` and `launchdarkly_custom_role` [#16](https://github.com/Stelminator/terraform-provider-launchdarkly/issues/16).
 
 BUG_FIXES:
 
-- Fixed bug preventing large number variations from being saved in the state correctly. [#14](https://github.com/launchdarkly/terraform-provider-launchdarkly/issues/14)
-- Fixed bug in import validation. [#19](https://github.com/launchdarkly/terraform-provider-launchdarkly/issues/19)
+- Fixed bug preventing large number variations from being saved in the state correctly. [#14](https://github.com/Stelminator/terraform-provider-launchdarkly/issues/14)
+- Fixed bug in import validation. [#19](https://github.com/Stelminator/terraform-provider-launchdarkly/issues/19)
 
 NOTES:
 
@@ -502,7 +502,7 @@ BUG FIXES:
 
 FEATURES:
 
-- Add tags attribute to `launchdarkly_environment` resource. [#5](https://github.com/launchdarkly/terraform-provider-launchdarkly/issues/5)
+- Add tags attribute to `launchdarkly_environment` resource. [#5](https://github.com/Stelminator/terraform-provider-launchdarkly/issues/5)
 - Add `maintainer_id` input validation.
 
 ENHANCEMENTS:
@@ -511,7 +511,7 @@ ENHANCEMENTS:
 
 BUG FIXES:
 
-- Allow flag `maintainer_id` to be unset. [#6](https://github.com/launchdarkly/terraform-provider-launchdarkly/issues/6)
+- Allow flag `maintainer_id` to be unset. [#6](https://github.com/Stelminator/terraform-provider-launchdarkly/issues/6)
 - Fix typo in initialization error message. Thanks @jen20
 - Flags created with invalid schema are deleted instead of left dangling.
 
