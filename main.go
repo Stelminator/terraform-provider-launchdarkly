@@ -2,7 +2,7 @@ package main
 
 import (
 	"github.com/hashicorp/terraform-plugin-sdk/v2/plugin"
-	"github.com/stelminator/terraform-provider-launchdarkly/v3/launchdarkly"
+	"github.com/launchdarkly/terraform-provider-launchdarkly/launchdarkly"
 )
 
 func main() {
