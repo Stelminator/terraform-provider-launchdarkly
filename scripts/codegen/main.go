@@ -1,6 +1,6 @@
 package main
 
-import "github.com/launchdarkly/terraform-provider-launchdarkly/scripts/codegen/cmd"
+import "github.com/stelminator/terraform-provider-launchdarkly/v2/scripts/codegen/cmd"
 
 func main() {
 	cmd.Execute()

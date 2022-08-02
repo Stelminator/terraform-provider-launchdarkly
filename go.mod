@@ -1,4 +1,4 @@
-module github.com/launchdarkly/terraform-provider-launchdarkly
+module github.com/stelminator/terraform-provider-launchdarkly/v2
 
 go 1.18
 

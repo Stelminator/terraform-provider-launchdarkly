@@ -34,7 +34,7 @@ Before getting started with the LaunchDarkly Terraform provider, make sure you h
 
 ### Install Terraform
 
-First and foremost, you need to make sure you have Terraform installed on the machine you will be applying the configurations from and that you meet the requirements listed on the [project readme](https://github.com/launchdarkly/terraform-provider-launchdarkly#requirements). For instructions on how to install Terraform, [see here](https://learn.hashicorp.com/terraform/getting-started/install.html).
+First and foremost, you need to make sure you have Terraform installed on the machine you will be applying the configurations from and that you meet the requirements listed on the [project readme](https://github.com/stelminator/terraform-provider-launchdarkly/v2#requirements). For instructions on how to install Terraform, [see here](https://learn.hashicorp.com/terraform/getting-started/install.html).
 
 ### Configure LD Credentials
 
@@ -62,6 +62,6 @@ terraform {
 }
 ```
 
-Some resources or attributes, such as [webhook policy_statements](./webhook/example.tf), that were added later may require a provider version later than 1.0; check the [changelog](https://github.com/launchdarkly/terraform-provider-launchdarkly/blob/main/CHANGELOG.md) for more information on versions.
+Some resources or attributes, such as [webhook policy_statements](./webhook/example.tf), that were added later may require a provider version later than 1.0; check the [changelog](https://github.com/stelminator/terraform-provider-launchdarkly/v2/blob/main/CHANGELOG.md) for more information on versions.
 
 If you would prefer to define your variables some other way, see [Terraform's documentation on input variables](https://learn.hashicorp.com/terraform/getting-started/variables) for some other ways to do so.

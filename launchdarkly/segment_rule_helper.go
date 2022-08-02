@@ -65,7 +65,7 @@ func segmentRuleFromResourceData(val interface{}) (ldapi.UserSegmentRule, error)
 	}
 
 	// weight == 0 when omitted from the config. In this case we do not want to include a weight in the PATCH
-	// request because the results will be counterintuitive. See: https://github.com/launchdarkly/terraform-provider-launchdarkly/issues/79
+	// request because the results will be counterintuitive. See: https://github.com/stelminator/terraform-provider-launchdarkly/v2/issues/79
 	weight := int32(ruleMap[WEIGHT].(int))
 	if weight > 0 {
 		r.SetWeight(weight)
