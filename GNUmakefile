@@ -4,7 +4,7 @@ GOFMT_FILES?=$$(find . -name '*.go')
 WEBSITE_REPO=github.com/hashicorp/terraform-website
 PKG_NAME=launchdarkly
 REV:=$(shell git rev-parse HEAD | cut -c1-6)
-LDFLAGS:=-ldflags="-X github.com/Stelminator/terraform-provider-launchdarkly/launchdarkly.version=$(REV)"
+LDFLAGS:=-ldflags="-X github.com/stelminator/terraform-provider-launchdarkly/launchdarkly.version=$(REV)"
 
 default: build
 

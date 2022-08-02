@@ -1,4 +1,4 @@
-module github.com/Stelminator/terraform-provider-launchdarkly/scripts/codegen
+module github.com/stelminator/terraform-provider-launchdarkly/scripts/codegen
 
 go 1.18
 

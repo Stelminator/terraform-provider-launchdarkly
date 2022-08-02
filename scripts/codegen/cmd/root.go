@@ -6,7 +6,7 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/Stelminator/terraform-provider-launchdarkly/scripts/codegen/manifestgen"
+	"github.com/stelminator/terraform-provider-launchdarkly/scripts/codegen/manifestgen"
 	"github.com/spf13/cobra"
 )
 
